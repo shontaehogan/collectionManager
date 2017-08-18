@@ -1,0 +1,11 @@
+{{#vehicle}}
+  <div class = "vehicleList">
+    <span><a href="/vehicleForm?id={{_id}}">{{image}}</a></span>
+    <span>Year: {{year}}</span>
+    <span>Make: {{make}}</span>
+    <span>Model: {{model}}</span>
+    <span>Description: {{description.color}} {{description.body}} {{description.extras}}</span>
+    <span>Price: ${{price}}</span>
+    <span><a href="/deleteVehicle/?id={{_id}}">Sold</a></span>
+  </div>
+  {{/vehicle}}

@@ -1,0 +1,36 @@
+<div class="wrapper">
+<form action="/saveVehicle" method="post">
+  <label for="id">VIN</label>
+  <input type="text" id="id" name="id" value="{{vehicle.id}}" />
+  <div class="fieldError">{{errors.image.message}}</div>
+
+  <label for="year">Year</label>
+  <input type="text" id="year" name="year" value="{{vehicle.year}}" />
+  <div class="fieldError">{{errors.year.message}}</div>
+
+  <label for="make">Make</label>
+  <input type="text" id="make" name="make" value="{{vehicle.make}}" />
+
+  <label for="model">Model</label>
+  <input type="text" id="model" name="model" value="{{vehicle.model}}" />
+
+  <label for="description">Description</label>
+  <input type="text" id="description" name="description.color" value="{{vehicle.description.color}}" placeholder="color" />
+  <input type="text" id="description" name="description.body" value="{{vehicle.description.body}}" placeholder="body style" />
+  <input type="text" id="description" name="description.extras" value="{{vehicle.description.extras}}" placeholder="extras/upgrades" />
+
+  <label for="price">Price: $</label>
+  <input type="text" id="price" name="price" value="{{vehicle.price}}" />
+
+  <label for="sold">Sold</label>
+  <input type="checkbox" id="sold" name="sold" value="true" {{#if vehicle.sold}}checked{{/if}}/>
+  <div class="fieldError">{{errors.sold.message}}</div>
+
+
+  {{#if vehicle._id}}
+    <input type="hidden" name="id" value="{{vehicle._id}}" />
+  {{/if}}
+
+  <button class="button-primary">Add</button>
+</form>
+</div>
